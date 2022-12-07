@@ -1,0 +1,19 @@
+ALTER TABLE users
+    ADD mobile_number VARCHAR(255) NULL;
+
+ALTER TABLE users
+    ADD PRIMARY KEY (id);
+
+DROP TABLE users_my;
+
+ALTER TABLE users
+    DROP COLUMN last_login;
+
+ALTER TABLE users
+    DROP COLUMN id;
+
+ALTER TABLE users
+    ADD id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY;
+
+ALTER TABLE users
+    MODIFY id BIGINT AUTO_INCREMENT;
